@@ -22,7 +22,7 @@ def diff(base_tar_path, new_tar_path, output_tar_path):
                         if member.isfile() or member.issym() or member.islnk():
                             diff_tar.addfile(member, new_tar.extractfile(member))
                         else:
-                            diff_tar.add(member)
+                            diff_tar.addfile(member)
                     else:
                         # In case new_files and base_files both contain the file
                         base_member = base_files.get(member.name)
@@ -32,7 +32,7 @@ def diff(base_tar_path, new_tar_path, output_tar_path):
                             if member.isfile() or member.issym() or member.islnk():
                                 diff_tar.addfile(new_member, new_tar.extractfile(new_member))
                             else:
-                                diff_tar.add(new_member)
+                                diff_tar.addfile(new_member)
                         else:
                             # In case file size is the same
                             if member.isfile() or member.issym() or member.islnk():
