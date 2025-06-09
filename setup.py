@@ -6,7 +6,7 @@ with open("README.md", encoding="utf-8") as f:
 
 setup(
     name="docker-image-diff",
-    version="0.1.0",
+    version="0.1.1",
     author="Junghyun Kwon",
     author_email="",
     description="Generate and apply diffs between Docker image tar archives",
