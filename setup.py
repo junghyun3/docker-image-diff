@@ -15,7 +15,7 @@ setup(
     url="https://github.com/junghyun3/docker-image-diff", 
     packages=find_packages(), 
     py_modules=["dockerdiff"] if not find_packages() else [],  # fallback if single module
-    python_requires=">=3.10",
+    python_requires=">=3.8",
     entry_points={
         "console_scripts": [
             "dockerdiff=dockerdiff.main:main",
